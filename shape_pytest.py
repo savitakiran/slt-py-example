@@ -62,6 +62,9 @@ def test_triangle():
     assert a8b11c13.perimeter() == 32
     assert a5b5c5.perimeter() == 15
     assert a4b6c8.perimeter() == 18
+    assert a8b11c13.semi_perimeter() == 16
+    assert a5b5c5.semi_perimeter() == 7.5
+    assert a4b6c8.semi_perimeter() == 9
     assert not a8b11c13.is_equilateral()
     assert not a4b6c8.is_equilateral()
     assert a5b5c5.is_equilateral()

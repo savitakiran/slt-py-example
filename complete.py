@@ -106,12 +106,12 @@ def get_rectangles(filename):
     # Manually iterate over the JSON dictionaries in the list
     # of rectangles. Create a new Rectangle object for each one
     # and add it to the list.
-    rectangle_objects = []
-    for rect in data["rectangle_list"]:
-        length = rect["length"]
-        width = rect["width"]
-        new_rectangle = Rectangle(length, width)
-        rectangle_objects.append(new_rectangle)
+    rectangle_objects = [Rectangle(rect["length"], rect["width"]) for rect in data["rectangle_list"]]
+    # for rect in data["rectangle_list"]:
+    #     length = rect["length"]
+    #     width = rect["width"]
+    #     new_rectangle = Rectangle(length, width)
+    #     rectangle_objects.append(new_rectangle)
 
     # Return the list of Rectangle objects
     return rectangle_objects

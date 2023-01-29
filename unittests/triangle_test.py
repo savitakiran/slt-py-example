@@ -37,6 +37,15 @@ class TriangleTest(TestCase):
         self.assertEqual(self.a5b5c5.perimeter(), 15)
         self.assertEqual(self.a4b6c8.perimeter(), 18)
 
+    def test_semi_perimeter(self):
+        """
+        Compare the test rectangle perimeter computations to the actual values.
+        """
+        self.assertEqual(self.a8b11c13.semi_perimeter(), 16)
+        self.assertEqual(self.a5b5c5.semi_perimeter(), 7.5)
+        self.assertEqual(self.a4b6c8.semi_perimeter(), 9)
+
+
     def test_is_equilateral(self):
         """
         Confirm or deny if the triangle is equilateral.
